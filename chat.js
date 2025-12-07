@@ -63,7 +63,7 @@ function removeTypingIndicator() {
 async function sendToAI(message) {
     showTypingIndicator();
 
-    const response = await fetch("/api/chat", {
+    const response = await fetch("https://portfolio-backend-eta-eosin.vercel.app/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
