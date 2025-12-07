@@ -1,8 +1,6 @@
-const fetch = require("node-fetch"); // optional in Node 18+, but safe to include
-
 module.exports = async function handler(req, res) {
     try {
-        const { message } = req.body;
+        const { message } = req.body || {}; // fallback to empty object
 
         if (!message) {
             return res.status(400).json({ reply: "No message provided." });
