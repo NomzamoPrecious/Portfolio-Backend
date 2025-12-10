@@ -15,7 +15,7 @@ module.exports = async function handler(req, res) {
             body: JSON.stringify({
                 model: "gpt-4o-mini",
                 messages: [
-                    { role: "system", content: "You are a portfolio AI assistant. Be friendly, helpful and explain things clearly." },
+                    { role: "system", content: "You are a portfolio AI assistant" },
                     { role: "user", content: message }
                 ]
             })
